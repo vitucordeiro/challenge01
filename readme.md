@@ -21,7 +21,7 @@ Desenvolver um algoritmo inteligente que categorize produtos de supermercado.
 
 - NodeJS
 
-- Implementar uma função que receba um json e retorne um json.
+- Implementar uma função que leia o json data01 e retorne um json com os dados categorizados e contados.
 - A função deve ser capaz de identificar produtos equivalentes mesmo com:
   - Ordem das palavras trocadas.
   - Pequenas variações de descrição.
