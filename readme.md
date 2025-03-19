@@ -236,5 +236,12 @@ Desenvolver um algoritmo inteligente que categorize produtos de supermercado.
 ]
 ```
 
-Após conclusão enviar link do seu repo e info para o google forms 
-[Forms](https://docs.google.com/forms/d/e/1FAIpQLSdm9_Ho3hiSuwBFZpdR-KrP6OKTHa670JGPhAlkM8lum86ZeQ/viewform?usp=dialog)
+Após conclusão enviar link do seu repo e info para o google [Forms](https://docs.google.com/forms/d/e/1FAIpQLSdm9_Ho3hiSuwBFZpdR-KrP6OKTHa670JGPhAlkM8lum86ZeQ/viewform?usp=dialog)
+
+## Critérios de avaliação:
+
+- Maior pontuação
+- Melhor entendimento do código
+- Entrega mais rapida
+
+
