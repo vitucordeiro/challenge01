@@ -1,0 +1,20 @@
+{
+  "name": "categorization_node",
+  "version": "1.0.0",
+  "description": "## Contexto Você está desenvolvendo um sistema para um comparador de preços que precisa identificar quando diferentes supermercados vendem o mesmo produto, mesmo quando os nomes têm pequenas variações.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vitucordeiro/challenge01.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vitucordeiro/challenge01/issues"
+  },
+  "homepage": "https://github.com/vitucordeiro/challenge01#readme"
+}
