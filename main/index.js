@@ -115,3 +115,39 @@ function categorizeProducts(products) {
 
     return categories;
 }
+
+/**
+ * Main function that reads the input JSON, processes the products and displays the result.
+ * - Reads the file `data01.json`.
+ * Categorizes the products.
+ * - Displays the result on the console.
+ */
+
+function main () {
+    const inputDir = path.join(__dirname, '../data/input');
+    const outputDir = path.join(__dirname, '../data/output');
+
+    if (!fs.existsSync(inputDir)) {
+        fs.mkdirSync(inputDir, { recursive: true });
+    }
+    if (!fs.existsSync(outputDir)) {
+        fs.mkdirSync(outputDir, { recursive: true });
+    }
+
+    const inputFilePath = path.join(inputDir, 'data01.json');
+    if (!fs.existsSync(inputFilePath)) {
+        throw new Error(`Input file not found: ${inputFilePath}`);
+    }
+
+    const raw = JSON.parse(fs.readFileSync(inputFilePath, 'utf-8'));
+
+    const data = categorizeProducts(raw);
+
+    const outputPath = path.join(outputDir, 'categorized_products.json');
+
+    fs.writeFileSync(outputPath, JSON.stringify(data, null, 2));
+
+    console.log(`Result saved in ${outputPath}`);
+}
+
+main()
