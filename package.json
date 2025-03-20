@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/vitucordeiro/challenge01/issues"
   },
-  "homepage": "https://github.com/vitucordeiro/challenge01#readme"
+  "homepage": "https://github.com/vitucordeiro/challenge01#readme",
+  "dependencies": {
+    "leven": "^4.0.0"
+  }
 }
