@@ -83,7 +83,7 @@ function calculateSimilarity (firstString, secondString){
 }
 
 /**
- * Categorizes products based on the similarity of their descriptions and brand.
+ * Categorizes products based on the similarity of their descriptions, brand, and type.
  * - Groups equivalent products (same product with variations in description).
  * - Separates products with different types, brands or quantities.
  *
@@ -98,16 +98,18 @@ function categorizeProducts(products) {
     const categories = [];
 
     products.forEach(item => {
-        const brand = extractBrand(item.title); 
-        const normalizeDescription = normalizeDescriptionProduct(item.title);
+        const brand = extractBrand(item.title)
+        const type = extractType(item.title) 
+        const normalizeDescription = normalizeDescriptionProduct(item.title)
 
-        let foundCategory = false;
+        let foundCategory = false
         for (const category of categories) {
-            const categoryBrand = extractBrand(category.category);
-            const normalizedCategoryName = normalizeDescriptionProduct(category.category);
+            const categoryBrand = extractBrand(category.category)
+            const categoryType = extractType(category.category)
+            const normalizedCategoryName = normalizeDescriptionProduct(category.category)
 
-            if (brand === categoryBrand) {
-                const similarity = calculateSimilarity(normalizedCategoryName, normalizeDescription);
+            if (brand === categoryBrand && type === categoryType) {
+                const similarity = calculateSimilarity(normalizedCategoryName, normalizeDescription)
 
                 if (similarity > 0.7) { 
                     category.count++;
