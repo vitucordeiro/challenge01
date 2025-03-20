@@ -2,6 +2,9 @@ const fs = require('fs')
 const leven = require('fast-levenshtein')
 const path = require('path')
 
+const KNOWN_TYPES = [
+    "Integral", "Desnatado", "Semi-Desnatado", "Zero Lactose", "Sem Lactose"
+];
 
 const KNOWN_BRANDS = [
     "Piracanjuba", "Italac", "Parmalat", "Elegê", "Ninho", "Tio João", "Camil", "Kicaldo",
@@ -9,6 +12,7 @@ const KNOWN_BRANDS = [
     "Maguary", "Aurora", "Casa de Madeira", "Friboi", "Seara", "Swift", "Sadia", "Perdigão",
     "Tirolez", "Scala", "Polenghi"
 ];
+
 
 /**
  * Extracts the brand from the product description.
@@ -24,6 +28,22 @@ function extractBrand(description) {
         }
     }
     return "Desconhecida"
+}
+
+/**
+ * Extracts the type from the product description.
+ * Searches for known types in the description.
+ *
+ * @param {string} description - The product description.
+ * @returns {string} The product type or "Desconhecido" if not found.
+ */
+function extractType(description) {
+    for (const type of KNOWN_TYPES) {
+        if (description.toLowerCase().includes(type.toLowerCase())) {
+            return type;
+        }
+    }
+    return "Desconhecido"; 
 }
 
 /**
